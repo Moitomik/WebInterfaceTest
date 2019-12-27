@@ -30,7 +30,7 @@ public class WebInterfaceTest {
         form.$("[data-test-id=phone] input").setValue("+792655500111");
         form.$("[data-test-id=agreement]").click();
         form.$(By.className("button")).click();
-        $(By.className("input__sub")).shouldHave(exactText("Телефон указан неверно. Должно быть 11 цифр, например, +79012345678."));
+        $ (".input_invalid .input__sub").shouldHave(exactText("Телефон указан неверно. Должно быть 11 цифр, например, +79012345678."));
         Thread.sleep(5000);
     }
 }
