@@ -14,7 +14,7 @@ public class WebInterfaceTest {
         open("http://localhost:9999");
         SelenideElement form = $("form");
         form.$("[data-test-id=name] input").setValue("Василий Васильев");
-        form.$("[data-test-id=phone] input").setValue("+79265550011");
+        form.$("[data-test-id=phone] input").setValue("+79265550012");
         form.$("[data-test-id=agreement]").click();
         form.$(By.className("button")).click();
         $("[data-test-id=order-success]").shouldHave(exactText("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время."));
@@ -27,7 +27,7 @@ public class WebInterfaceTest {
         open("http://localhost:9999");
         SelenideElement form = $("form");
         form.$("[data-test-id=name] input").setValue("Василий Васильев");
-        form.$("[data-test-id=phone] input").setValue("+792655500111");
+        form.$("[data-test-id=phone] input").setValue("+792655500112");
         form.$("[data-test-id=agreement]").click();
         form.$(By.className("button")).click();
         $ (".input_invalid .input__sub").shouldHave(exactText("Телефон указан неверно. Должно быть 11 цифр, например, +79012345678."));
